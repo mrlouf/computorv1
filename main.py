@@ -15,8 +15,8 @@ def main():
 	else:
 		c.equation = args[0]
 
-	c.reduce()
 	c.parse()
+	c.reduce()
 	c.compute()
 
 if __name__ == "__main__":

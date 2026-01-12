@@ -11,11 +11,11 @@ class Computorv1:
 		self.equation = concatenated
 
 	def parse(self):
-		pass
-		# p.parse(self.equation)
-
-	def compute(self):
-		pass
+		if '=' not in self.equation:
+			raise ValueError("Equation must contain an '=' sign.")
+		left, right = self.equation.split('=')
+		if not left or not right:
+			raise ValueError("Both sides of the equation must be non-empty.")
 
 	""" 
 		This function parses the equation given and tries to reduce it to the canonical form
@@ -60,3 +60,6 @@ class Computorv1:
 		print("Polynomial degree:", max_power)
 
 		self.reduced = reduced
+
+	def compute(self):
+		pass
