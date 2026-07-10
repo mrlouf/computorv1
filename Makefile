@@ -8,6 +8,9 @@ all: $(TARGET)
 $(TARGET): cmd/main.go
 	go build -o $@ cmd/main.go
 
+air: 
+	
+
 clean:
 	rm -f $(TARGET)
 	rm -rf ./tmp

@@ -7,10 +7,10 @@ tmp_dir = "tmp"
 
 [build]
   args_bin = []
-  bin = "./taskmasterctl"
-  cmd = "go build -race -o ./taskmasterctl ./cmd/taskmasterctl"
+  bin = "./computorv1"
+  cmd = "go build -o ./computorv1 ./cmd/computorv1"
   delay = 1000
-  entrypoint = ["./taskmasterctl"]
+  entrypoint = ["./computorv1"]
   exclude_dir = ["assets", "tmp", "vendor", "testdata"]
   exclude_file = []
   exclude_regex = ["_test.go"]

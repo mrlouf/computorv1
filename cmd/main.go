@@ -8,6 +8,12 @@ import (
 	"computorv1/internal/parse"
 )
 
+func displayUsage() error {
+
+	return fmt.Errorf("Please enter your expression as a single, quoted string")
+
+}
+
 func computor() error {
 
 	var expression string
@@ -16,8 +22,8 @@ func computor() error {
 	if len(os.Args) == 1 {
 		expression, err = input.GetExpressionFromStdin()
 	} else {
-		if len(os.Args) > 1 {
-			return fmt.Errorf("Please enter your expression as a single, quoted string")
+		if len(os.Args) > 2 {
+			return displayUsage()
 		}
 		expression = os.Args[1]
 	}
